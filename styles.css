@@ -34,8 +34,8 @@ body {
 
 button {
     border-radius: 50%;
-    width: 3rem;
-    height: 3rem;
+    width: 3.5rem;
+    height: 3.5rem;
     margin: 5px;
     background-color: #E7E7F8;
     font-style: italic;
@@ -45,7 +45,7 @@ button {
 
 button:last-of-type {
     grid-column: 3 / span 2;
-    width: 7rem;
+    width: 8.5rem;
     border-radius: 30px;
 }
 

@@ -1,0 +1,1 @@
+Calculator project done with HTML, CSS and Vanilla JavaScript for The Odin Project Curriculum.

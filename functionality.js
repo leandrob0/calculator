@@ -41,18 +41,18 @@ function operate2(operator, num1, num2) {
 }
 
 class Calculator {
-    constructor(resultScreen) {
+    constructor(resultScreen) { //WHERE EVERYTHING WILL BE DISPLAYED
         this.resultScreen = resultScreen;
     }
 
     clearAll() {
-        this.currentOperand = '';
+        this.currentOperand = ''; 
         this.previousOperand = '';
         this.operation = undefined;
     }
 
     delete() {
-        this.currentOperand = this.currentOperand.toString().slice(0 , -1);
+        this.currentOperand = this.currentOperand.toString().slice(0 , -1); //SLICES THE STRING STARTING FROM THE BACK
     }
 
     appendNumber(number) {
@@ -60,13 +60,13 @@ class Calculator {
         {
             this.currentOperand = '';
         }
-        if(number === '.' && this.currentOperand.includes('.')) return;
+        if(number === '.' && this.currentOperand.includes('.')) return; //MAKES SURE MORE THAN 1  DOT WONT BE USED
         this.currentOperand = this.currentOperand.toString() + number.toString();
     }
 
     chooseOperation(operation) {
         if(this.currentOperand === '') return;
-        if(this.previousOperand !== '') {
+        if(this.previousOperand !== '') { //TO CALCULATE SEVERAL TIMES BEFORE PUSHING =
             this.operate();
         }
         this.operation = operation;

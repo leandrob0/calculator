@@ -3,12 +3,14 @@ body {
     height: 100vh;
     background-color: #222222;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     font-family: 'Montserrat', sans-serif;
 }
 
 #total-container {
+    margin-top: 50px;
     background-color: #4B4E6D;
     border-radius: 20px;
     display: flex;
@@ -23,6 +25,18 @@ body {
     margin: 20px;
     width: 290px;
     height: 75px;
+}
+
+p {
+    margin: 0;
+    margin-right: 20px;
+    font-weight: 800;
+    font-size: 1.5rem;
+}
+
+#results {
+    float: right;
+    margin-top: 40px;
 }
 
 #buttons-container {
@@ -41,6 +55,7 @@ button {
     font-style: italic;
     font-size: 1rem;
     border: none;
+    transition: all .2s ease-in-out;
 }
 
 button:last-of-type {
@@ -51,4 +66,29 @@ button:last-of-type {
 
 .number {
     font-weight: bold;
+}
+
+button:hover { 
+    transform: scale(1.1); 
+}
+
+#footer {
+    background-color: #4B4E6D;
+    height: 35px;
+    width: 100%;
+    bottom: 0;
+    text-align: center;
+    font-weight: 700;
+    margin-top: auto; 
+}
+
+span {
+    vertical-align: -webkit-baseline-middle;
+    font-size: 1rem;
+}
+
+@media (max-height: 600px) {
+    #footer {
+        display: none;
+    }
 }

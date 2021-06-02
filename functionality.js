@@ -78,6 +78,7 @@ class Calculator {
         const prev = parseFloat(this.previousOperand);
         const current = parseFloat(this.currentOperand);
         if(isNaN(prev) || isNaN(current)) return;
+        if(this.operation === '/' && current == 0) return;
         let result = operate2(this.operation, prev, current);
         if(result.toString().length > 16)
         {
